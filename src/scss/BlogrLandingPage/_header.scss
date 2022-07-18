@@ -1,0 +1,161 @@
+@use '../custom' as *;
+
+.header {
+    position: relative;
+    background: linear-gradient(100deg, $degradado-3 35%, $degradado-4 100%);
+    border-bottom-left-radius: 8rem;
+
+    &::before {
+        content: '';
+        background-image: url(../img/bg-pattern-intro-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100rem;
+        height: 100rem;
+        background-size: 110rem;
+        position: absolute;
+        top: -21rem;
+        right: -44rem;
+
+        @include media-breakpoint-up(sm) {
+            top: -29rem;
+            right: -31rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            right: -25rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            background-image: url(../img/bg-pattern-intro-desktop.svg); 
+            width: 150rem;
+            background-size: 150rem;
+            top: -18rem;
+            right: -40rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            background-image: url(../img/bg-pattern-intro-desktop.svg); 
+            width: 200rem;
+            background-size: 250rem;
+            top: -29rem;
+            right: -69rem;
+        }
+    }
+
+    .contenido {
+        z-index: 1;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 3.7rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 5.5rem;
+        }
+    }
+
+    .btn-cerrar,
+    .btn-abrir {
+        border: none;
+        background-color: transparent;
+    }
+
+    .btn-abrir{
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    
+    .border-custom {
+        border-bottom: 1px solid $info;
+
+        @include media-breakpoint-up(lg){ 
+            border: none;
+        }
+    }
+
+    .offcanvas-custom {
+        background: linear-gradient(145deg, $degradado-3 30%, $degradado-4 100%);
+        border-bottom-left-radius: 10rem;
+        width: 100%;
+        height: 90%;
+
+        @include media-breakpoint-up(lg) {
+            background: transparent;
+        }
+    }
+
+    .offcanvas-body {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto -3rem auto;
+        background-color: $white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 10px $info;
+
+        @include media-breakpoint-up(sm) {
+            width: 60%;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 40%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            background-color: transparent;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+        }
+    }
+
+    .nav-link {
+        @include media-breakpoint-up(lg) {
+            color: $white;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: lighten($info, 15%);
+
+        @include media-breakpoint-up(lg) {
+            background-color: $white;
+        }
+    }
+
+    .icono {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        &::before {
+            content: '';
+            display: block;
+            background-image: url(../img/icon-arrow-dark.svg);
+            width: 1rem;
+            height: 1rem;
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            transition: transform .3s;
+
+            @include media-breakpoint-up(lg) {
+                background-image: url(../img/icon-arrow-light.svg);
+            }
+        }
+    }
+
+    .offcanvas-backdrop {
+        background-color: $white;
+    }
+
+    .offcanvas-backdrop.show {
+        opacity: 1;
+    }
+
+}

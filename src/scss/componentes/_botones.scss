@@ -1,0 +1,50 @@
+@use '../custom' as *;
+
+
+.btn-hero-1 {
+    // Valores que toma en mixin de boton de BS
+        //  bgcolor, border, color texto, hover-bgcolor, hover-border, hover-color
+        @include button-variant($white, transparent, $primary, $secondary, transparent, $white);
+    // Tomas los valores de 
+            // padding-y, padding-x, font-size, border-radius
+        @include button-size(1rem, 2rem, 1.8rem, 5rem);
+        text-decoration: none;
+        font-weight: bold;
+
+        @include transition(background-color .3s ease-in-out);
+
+}
+
+.btn-hero-2 {
+        // Valores que toma en mixin de boton de BS
+        //  bgcolor, border, color texto, hover-bgcolor, hover-border, hover-color
+        @include button-variant(transparent, $white, $white, $white, $white, $secondary);
+        border: 1px solid $white;
+        text-decoration: none;
+        font-weight: bold;
+
+    // Tomas los valores de 
+            // padding-y, padding-x, font-size, border-radius
+        @include button-size(1rem, 2rem, 1.8rem, 5rem);
+
+        @include transition(background-color .3s ease-in-out);
+}
+
+.bg-custom-gradient {
+    background: linear-gradient(to right, $degradado-3 30%, $degradado-4 100%);
+    padding: 1rem 3rem;
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5rem;
+    
+    &:hover {
+        color: $white;
+    }
+
+    @include media-breakpoint-up(lg) {
+        background: none;
+        @include button-variant($white, transparent, $primary, $secondary, transparent, $white);
+    }
+}
+

@@ -1,0 +1,61 @@
+// Colores
+$blanco: #fff;
+$lightred: #ff525d;
+$verylightGray: #ff7a85;
+$verydarkBlue: #1f3f5b;
+$graysishBlue: #c8c8cb;
+$vdarkgrayishBlue: #4b5862;
+$verydarkBlackBlue: #25252d;
+$degradado: #2c2d3f;
+$degradado-2: #3f4164;
+$degradado-3: #ff8f70;
+$degradado-4: #ff3d54;
+
+
+$white: $blanco;
+$primary: $lightred;
+$secondary: $verylightGray;
+$success: $verydarkBlue;
+$info: $graysishBlue;
+$warning: $vdarkgrayishBlue;
+$danger: $verydarkBlackBlue;
+
+// Fuentes 
+$primeraFuente: 'Overpass', sans-serif;
+$segundaFuente: 'Ubuntu', sans-serif;
+
+$font-size-root: 62.5%; // Cambiando a 1rem = 10px
+$font-size-base: 1.6rem; // con la nueva medida va a afectar a botones, enlaces, parrafos
+
+$headings-font-family: $primeraFuente;
+$headings-color: $verydarkBlue;
+$h1-font-size: 5rem;
+$headings-font-weight: 600;
+
+$font-family-base: $primeraFuente;
+$body-color: $warning;
+
+// Navs
+$dropdown-border-radius: 1rem;
+$dropdown-border-color: 0;
+$dropdown-link-color: $success;
+$dropdown-item-padding-y: 1rem;
+$dropdown-item-padding-x: 2rem;
+
+$nav-link-color: $success;
+$nav-link-hover-color: $success;
+
+
+
+// Toggle Button
+$navbar-light-toggler-border-color: 0;
+
+// Espaciado (esto afecta margin, paddings)
+$spacer: 5rem;
+
+// Dropdown
+$dropdown-link-active-bg: none;
+$dropdown-link-active-color: $verydarkBlackBlue;
+
+// Importar Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
